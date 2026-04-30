@@ -36,7 +36,7 @@ html { scroll-behavior: smooth; background: #000000; }
 body {
 font-family: ‘Jost’, sans-serif;
 background: #000000;
-color: var(–cream);
+color: #F5ECD8;
 overflow-x: hidden;
 min-height: 100vh;
 }
@@ -128,17 +128,17 @@ filter: drop-shadow(0 0 14px rgba(201,168,76,0.3));
 .hero-eyebrow {
 font-size: 10px; font-weight: 300;
 letter-spacing: 7px; text-transform: uppercase;
-color: var(–gold); margin-bottom: 16px;
+color: #C9A84C; margin-bottom: 16px;
 animation: fadeUp 1s 0.2s both;
 }
 .hero-title {
 font-family: ‘Cormorant Garamond’, serif;
 font-size: clamp(52px, 9vw, 100px);
 font-weight: 300; line-height: 0.95;
-color: var(–white); letter-spacing: -1px;
-animation: fadeUp 1.2s 0.4s both;
+color: #FFFFFF; letter-spacing: -1px;
+animation: fadeUp 1.2s 0.4s both; color: #FFFFFF;
 }
-.hero-title em { font-style: italic; color: var(–gold-light); }
+.hero-title em { font-style: italic; color: #E8D08A; }
 .hero-divider {
 width: 70px; height: 1px;
 background: linear-gradient(90deg, transparent, var(–gold), transparent);
@@ -148,7 +148,7 @@ animation: fadeUp 1s 0.7s both;
 .hero-sub {
 font-size: 11px; font-weight: 300;
 letter-spacing: 5px; text-transform: uppercase;
-color: rgba(242,232,213,0.45);
+color: rgba(245,236,216,0.7);
 animation: fadeUp 1s 0.9s both;
 }
 @keyframes fadeUp {
@@ -160,7 +160,7 @@ to   { opacity: 1; transform: translateY(0); }
 .nav-tabs-wrap {
 position: sticky;
 top: 0; z-index: 100;
-background: rgba(0,0,0,0.97);
+background: rgba(0,0,0,1);
 backdrop-filter: blur(20px);
 border-bottom: 1px solid rgba(201,168,76,0.12);
 }
@@ -184,8 +184,8 @@ white-space: nowrap;
 transition: all 0.3s;
 margin-bottom: -1px;
 }
-.nav-tab:hover { color: var(–cream); }
-.nav-tab.active { color: var(–gold); border-bottom-color: var(–gold); }
+.nav-tab:hover { color: #F5ECD8; }
+.nav-tab.active { color: #C9A84C; border-bottom-color: #C9A84C; }
 
 /* ── PANELS ─────────────────────────────────────────────── */
 .panel { display: none; }
@@ -206,24 +206,24 @@ margin-bottom: 48px;
 .panel-label {
 font-size: 9px; font-weight: 400;
 letter-spacing: 6px; text-transform: uppercase;
-color: var(–gold); margin-bottom: 12px;
+color: #C9A84C; margin-bottom: 12px;
 }
 .panel-title {
 font-family: ‘Cormorant Garamond’, serif;
 font-size: clamp(38px, 5vw, 58px);
 font-weight: 300; line-height: 1;
-color: var(–white);
+color: #FFFFFF;
 }
-.panel-title em { font-style: italic; color: var(–gold-light); }
+.panel-title em { font-style: italic; color: #E8D08A; }
 .gold-rule {
 width: 44px; height: 1px;
-background: var(–gold); margin-top: 20px;
+background: #C9A84C; margin-top: 20px;
 }
 
 /* ── SUBSECTION LABEL ───────────────────────────────────── */
 .sub-label {
 font-size: 9px; letter-spacing: 5px;
-text-transform: uppercase; color: var(–gold-dim);
+text-transform: uppercase; color: #9A7A3A;
 padding: 28px 0 10px;
 border-bottom: 1px solid rgba(201,168,76,0.15);
 margin-bottom: 4px;
@@ -243,7 +243,7 @@ display: flex;
 justify-content: space-between;
 align-items: baseline;
 padding: 15px 0;
-border-bottom: 1px solid rgba(201,168,76,0.07);
+border-bottom: 1px solid rgba(201,168,76,0.15);
 gap: 16px;
 position: relative;
 transition: all 0.3s;
@@ -265,7 +265,7 @@ font-size: 17px; font-weight: 400;
 color: #F5ECD8; margin-bottom: 2px;
 transition: color 0.3s;
 }
-.menu-item:hover .item-name { color: var(–gold-light); }
+.menu-item:hover .item-name { color: #E8D08A; }
 .item-eng {
 font-size: 11px; font-style: italic;
 color: rgba(245,236,216,0.45);
@@ -279,10 +279,10 @@ color: #C9A84C; white-space: nowrap; flex-shrink: 0;
 .item-price small { font-size: 11px; color: #9A7A3A; }
 
 /* star highlight */
-.item-name.star { color: var(–gold-light); }
+.item-name.star { color: #E8D08A; }
 .item-name.star::after {
 content: ’ ★’;
-font-size: 12px; color: var(–gold);
+font-size: 12px; color: #C9A84C;
 }
 
 /* ── SPECIAL BANNER ─────────────────────────────────────── */
@@ -300,23 +300,23 @@ grid-column: 1 / -1;
 }
 .special-banner-text .tag {
 font-size: 9px; letter-spacing: 4px;
-text-transform: uppercase; color: var(–rose);
+text-transform: uppercase; color: #C4646A;
 margin-bottom: 8px;
 }
 .special-banner-text h3 {
 font-family: ‘Cormorant Garamond’, serif;
-font-size: 26px; font-weight: 400; color: var(–white);
+font-size: 26px; font-weight: 400; color: #FFFFFF;
 margin-bottom: 6px;
 }
 .special-banner-text p {
-font-size: 12px; color: rgba(242,232,213,0.45);
+font-size: 12px; color: rgba(245,236,216,0.7);
 line-height: 1.6;
 }
 .special-banner-price { text-align: right; flex-shrink: 0; }
 .special-banner-price .price {
 font-family: ‘Cormorant Garamond’, serif;
 font-size: 42px; font-weight: 300;
-color: var(–gold-light); line-height: 1;
+color: #E8D08A; line-height: 1;
 }
 .special-banner-price .per {
 font-size: 11px; color: rgba(242,232,213,0.35); margin-top: 4px;
@@ -353,13 +353,13 @@ opacity: 0; transition: opacity 0.35s;
 .cocktail-name {
 font-family: ‘Cormorant Garamond’, serif;
 font-size: 19px; font-weight: 400;
-color: var(–cream); margin-bottom: 4px;
+color: #F5ECD8; margin-bottom: 4px;
 transition: color 0.3s;
 }
-.cocktail-item:hover .cocktail-name { color: var(–gold-light); }
+.cocktail-item:hover .cocktail-name { color: #E8D08A; }
 .cocktail-price {
 font-family: ‘Cormorant Garamond’, serif;
-font-size: 15px; color: var(–gold);
+font-size: 15px; color: #C9A84C;
 }
 
 /* ── RON / VINO GRID (4 col) ────────────────────────────── */
@@ -379,10 +379,10 @@ transition: border-color 0.3s;
 .ron-item:hover { border-color: rgba(201,168,76,0.2); }
 .ron-name {
 font-family: ‘Cormorant Garamond’, serif;
-font-size: 16px; color: var(–cream2); margin-bottom: 3px;
+font-size: 16px; color: #EDE0C8; margin-bottom: 3px;
 }
 .ron-price {
-font-size: 13px; color: var(–gold-dim);
+font-size: 13px; color: #9A7A3A;
 font-family: ‘Cormorant Garamond’, serif;
 }
 
@@ -402,10 +402,10 @@ transition: border-color 0.3s;
 .bebida-item:hover { border-color: rgba(201,168,76,0.2); }
 .bebida-name {
 font-family: ‘Cormorant Garamond’, serif;
-font-size: 16px; color: var(–cream); margin-bottom: 3px;
+font-size: 16px; color: #F5ECD8; margin-bottom: 3px;
 }
 .bebida-price {
-font-size: 13px; color: var(–gold);
+font-size: 13px; color: #C9A84C;
 font-family: ‘Cormorant Garamond’, serif;
 }
 
@@ -442,7 +442,7 @@ text-align: center;
 .footer-brand {
 font-family: ‘Cinzel’, serif;
 font-size: 12px; letter-spacing: 5px;
-color: var(–gold-dim); margin-bottom: 8px;
+color: #9A7A3A; margin-bottom: 8px;
 }
 .footer-copy {
 font-size: 11px; color: rgba(242,232,213,0.2);
@@ -786,7 +786,7 @@ background: #000000;
       <div class="gold-rule"></div>
     </div>
     <div class="reveal reveal-d1">
-      <div style="display:block; font-size:9px; letter-spacing:5px; text-transform:uppercase; color:var(--gold-dim); padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px;">Bebidas</div>
+      <div style="display:block; font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px;">Bebidas</div>
       <div class="bebidas-grid" style="margin-bottom:40px;">
         <div class="bebida-item"><div class="bebida-name">Agua Natural (500ml)</div><div class="bebida-price">370 MN</div></div>
         <div class="bebida-item"><div class="bebida-name">Cerveza Importada</div><div class="bebida-price">500 MN</div></div>
@@ -797,7 +797,7 @@ background: #000000;
         <div class="bebida-item"><div class="bebida-name">Limonada Frappe</div><div class="bebida-price">250 MN</div></div>
         <div class="bebida-item"><div class="bebida-name">Limonada Villaverde</div><div class="bebida-price">300 MN</div></div>
       </div>
-      <div style="display:block; font-size:9px; letter-spacing:5px; text-transform:uppercase; color:var(--gold-dim); padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px;">Cafés</div>
+      <div style="display:block; font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px;">Cafés</div>
       <div class="cafe-grid">
         <div class="bebida-item"><div class="bebida-name">Café Expreso</div><div class="bebida-price">140 MN</div></div>
         <div class="bebida-item"><div class="bebida-name">Café Americano</div><div class="bebida-price">150 MN</div></div>
@@ -822,7 +822,7 @@ background: #000000;
       <div class="gold-rule"></div>
     </div>
     <div class="reveal reveal-d1">
-      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:var(--gold-dim); padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Cócteles</div>
+      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Cócteles</div>
       <div class="cocktail-grid" style="margin-bottom:48px;">
         <div class="cocktail-item"><div class="cocktail-name">Daiquiri</div><div class="cocktail-price">500 MN</div></div>
         <div class="cocktail-item"><div class="cocktail-name">Cuba Libre</div><div class="cocktail-price">500 MN</div></div>
@@ -845,7 +845,7 @@ background: #000000;
         <div class="cocktail-item"><div class="cocktail-name">Wisky Reserve 7 Años</div><div class="cocktail-price">300 MN</div></div>
         <div class="cocktail-item"><div class="cocktail-name">Crema de Licor Arisbell</div><div class="cocktail-price">500 MN</div></div>
       </div>
-      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:var(--gold-dim); padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Rones</div>
+      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Rones</div>
       <div class="ron-grid">
         <div class="ron-item"><div class="ron-name">Havana Club 3 Años</div><div class="ron-price">350 MN</div></div>
         <div class="ron-item"><div class="ron-name">Havana Club Especial</div><div class="ron-price">450 MN</div></div>
@@ -870,7 +870,7 @@ background: #000000;
       <div class="gold-rule"></div>
     </div>
     <div class="reveal reveal-d1">
-      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:var(--gold-dim); padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Vino Tinto</div>
+      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Vino Tinto</div>
       <div class="ron-grid" style="margin-bottom:36px;">
         <div class="ron-item"><div class="ron-name">Entre Rios</div><div class="ron-price">400 MN</div></div>
         <div class="ron-item"><div class="ron-name">La Baronne</div><div class="ron-price">650 MN</div></div>
@@ -878,18 +878,18 @@ background: #000000;
         <div class="ron-item"><div class="ron-name">Constelación</div><div class="ron-price">600 MN</div></div>
         <div class="ron-item"><div class="ron-name">Gato Negro</div><div class="ron-price">1,000 MN</div></div>
       </div>
-      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:var(--gold-dim); padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Vino Blanco</div>
+      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Vino Blanco</div>
       <div class="ron-grid" style="margin-bottom:36px;">
         <div class="ron-item"><div class="ron-name">Entre Rios</div><div class="ron-price">550 MN</div></div>
         <div class="ron-item"><div class="ron-name">La Baronne</div><div class="ron-price">750 MN</div></div>
         <div class="ron-item"><div class="ron-name">La Fauna de la Viña</div><div class="ron-price">800 MN</div></div>
       </div>
-      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:var(--gold-dim); padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Cabernet Sauvignon</div>
+      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Cabernet Sauvignon</div>
       <div class="ron-grid" style="margin-bottom:36px;">
         <div class="ron-item"><div class="ron-name">Frontera</div><div class="ron-price">850 MN</div></div>
         <div class="ron-item"><div class="ron-name">Loco de Piedra</div><div class="ron-price">950 MN</div></div>
       </div>
-      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:var(--gold-dim); padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Tempranillo & Carmenere</div>
+      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Tempranillo & Carmenere</div>
       <div class="ron-grid">
         <div class="ron-item"><div class="ron-name">Finca del Mar</div><div class="ron-price">900 MN</div></div>
         <div class="ron-item"><div class="ron-name">Luciente</div><div class="ron-price">800 MN</div></div>
