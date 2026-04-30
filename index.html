@@ -483,6 +483,8 @@ background: #000000;
   <div class="nav-tabs">
     <button class="nav-tab active"     onclick="showPanel('desayunos',this)">Desayunos</button>
     <button class="nav-tab"            onclick="showPanel('entrantes',this)">Entrantes</button>
+    <button class="nav-tab"            onclick="showPanel('guarniciones',this)">Guarniciones</button>
+    <button class="nav-tab"            onclick="showPanel('agregados',this)">Agregados</button>
     <button class="nav-tab"            onclick="showPanel('tacos',this)">Tacos & Kebab</button>
     <button class="nav-tab"            onclick="showPanel('pescados',this)">Pescados & Mariscos</button>
     <button class="nav-tab"            onclick="showPanel('carnes',this)">Carnes</button>
@@ -566,7 +568,54 @@ background: #000000;
       <div class="menu-item"><div class="item-left"><div class="item-name">Dados de Jamón y Queso Gouda</div><div class="item-eng">Ham and gouda cheese cubes</div></div><div class="item-price">900<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Coctel de Pescado</div><div class="item-eng">Fish cocktail</div></div><div class="item-price">800<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Coctel de Camarón</div><div class="item-eng">Shrimp cocktail</div></div><div class="item-price">1,400<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name class="star"">Picadera Arguelles</div><div class="item-eng">Arguelles platter</div></div><div class="item-price">2,050<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name class="star"">Picadera Argüelles</div><div class="item-eng">Argüelles platter</div></div><div class="item-price">2,050<small> MN</small></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- GUARNICIONES -->
+
+<div class="panel" id="panel-guarniciones">
+  <div class="panel-wrap">
+    <div class="panel-header reveal">
+      <div class="panel-label">Para acompañar tu plato</div>
+      <div class="panel-title"><em>Guarniciones</em></div>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="item-grid reveal reveal-d1">
+      <div class="menu-item"><div class="item-left"><div class="item-name">Arroz Frito</div><div class="item-eng">Fried rice</div></div><div class="item-price">1,500<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Arroz Frito Especial</div><div class="item-eng">Special fried rice</div></div><div class="item-price">2,300<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Arroz con Vegetales</div><div class="item-eng">Rice with vegetables</div></div><div class="item-price">650<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Ración de Arroz Moro</div><div class="item-eng">Moro rice portion</div></div><div class="item-price">250<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Ración de Arroz Blanco</div><div class="item-eng">White rice portion</div></div><div class="item-price">150<small> MN</small></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- AGREGADOS -->
+
+<div class="panel" id="panel-agregados">
+  <div class="panel-wrap">
+    <div class="panel-header reveal">
+      <div class="panel-label">Personaliza tu plato</div>
+      <div class="panel-title"><em>Agregados</em></div>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="item-grid reveal reveal-d1">
+      <div class="menu-item"><div class="item-left"><div class="item-name">Chorizo</div><div class="item-eng">Sausage</div></div><div class="item-price">400<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Cerdo</div><div class="item-eng">Pork</div></div><div class="item-price">800<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Pollo</div><div class="item-eng">Chicken</div></div><div class="item-price">400<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Pimiento</div><div class="item-eng">Pepper</div></div><div class="item-price">300<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Col</div><div class="item-eng">Cabbage</div></div><div class="item-price">200<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Vegetales</div><div class="item-eng">Vegetables</div></div><div class="item-price">300<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Jamón</div><div class="item-eng">Ham</div></div><div class="item-price">300<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Queso Blanco</div><div class="item-eng">White cheese</div></div><div class="item-price">500<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Queso Gouda</div><div class="item-eng">Gouda cheese</div></div><div class="item-price">400<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Cebolla</div><div class="item-eng">Onion</div></div><div class="item-price">200<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Piña</div><div class="item-eng">Pineapple</div></div><div class="item-price">250<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Aceituna</div><div class="item-eng">Olive</div></div><div class="item-price">300<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Atún</div><div class="item-eng">Tuna</div></div><div class="item-price">550<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Tomate</div><div class="item-eng">Tomato</div></div><div class="item-price">250<small> MN</small></div></div>
     </div>
   </div>
 </div>
