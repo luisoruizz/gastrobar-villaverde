@@ -7,21 +7,27 @@
 <title>Carta — Gastrobar Villaverde</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
+  /* Font fallbacks if Google Fonts fails to load */
+  @font-face { font-family: 'Cormorant Garamond'; src: local('Georgia'); }
+  @font-face { font-family: 'Cinzel'; src: local('Georgia'); }
+  @font-face { font-family: 'Jost'; src: local('Helvetica Neue'), local('Arial'); }
+</style>
+<style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
 –gold:       #C9A84C;
 –gold-light: #E8D08A;
 –gold-pale:  #F5EAC8;
-–gold-dim:   #7A6030;
+–gold-dim:   #9A7A3A;
 –black:      #000000;
 –dark:       #000000;
 –dark2:      #000000;
 –dark3:      #080808;
 –mid:        #111111;
-–cream:      #F2E8D5;
-–cream2:     #E8DBC4;
-–white:      #FDFAF4;
+–cream:      #F5ECD8;
+–cream2:     #EDE0C8;
+–white:      #FFFFFF;
 –rose:       #C4646A;
 }
 
@@ -254,23 +260,23 @@ transition: opacity 0.3s;
 .menu-item:hover::before { opacity: 1; }
 .item-left { flex: 1; }
 .item-name {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, serif;
 font-size: 17px; font-weight: 400;
-color: var(–cream); margin-bottom: 2px;
+color: #F5ECD8; margin-bottom: 2px;
 transition: color 0.3s;
 }
 .menu-item:hover .item-name { color: var(–gold-light); }
 .item-eng {
 font-size: 11px; font-style: italic;
-color: rgba(242,232,213,0.3);
-font-family: ‘Cormorant Garamond’, serif;
+color: rgba(245,236,216,0.45);
+font-family: ‘Cormorant Garamond’, Georgia, serif;
 }
 .item-price {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, serif;
 font-size: 17px; font-weight: 400;
-color: var(–gold); white-space: nowrap; flex-shrink: 0;
+color: #C9A84C; white-space: nowrap; flex-shrink: 0;
 }
-.item-price small { font-size: 11px; color: var(–gold-dim); }
+.item-price small { font-size: 11px; color: #9A7A3A; }
 
 /* star highlight */
 .item-name.star { color: var(–gold-light); }
@@ -422,6 +428,9 @@ transition: opacity 0.7s ease, transform 0.7s ease;
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-d1 { transition-delay: 0.08s; }
 .reveal-d2 { transition-delay: 0.16s; }
+
+/* Fallback: if JS fails, show everything */
+.no-js .reveal { opacity: 1; transform: none; }
 
 /* ── FOOTER ─────────────────────────────────────────────── */
 footer {
@@ -913,26 +922,29 @@ function showPanel(id, btn) {
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('panel-' + id).classList.add('active');
   btn.classList.add('active');
-  // scroll tab into view
   btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-  // re-trigger reveals
-  triggerReveals();
+  setTimeout(triggerReveals, 50);
 }
 
-// Scroll reveal
+// Scroll reveal — mark ALL as visible immediately then animate
 function triggerReveals() {
   document.querySelectorAll('.reveal').forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.92) el.classList.add('visible');
+    el.classList.add('visible');
   });
 }
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Initial trigger
-setTimeout(triggerReveals, 100);
+// Use IntersectionObserver as enhancement
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.05 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+// Force all visible on load — no content hidden
+window.addEventListener('DOMContentLoaded', () => setTimeout(triggerReveals, 100));
+window.addEventListener('load', triggerReveals);
+triggerReveals();
 </script>
 
 </body>
