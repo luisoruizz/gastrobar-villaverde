@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -16,173 +15,173 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-–gold:       #C9A84C;
-–gold-light: #E8D08A;
-–gold-pale:  #F5EAC8;
-–gold-dim:   #9A7A3A;
-–black:      #000000;
-–dark:       #000000;
-–dark2:      #000000;
-–dark3:      #080808;
-–mid:        #111111;
-–cream:      #F5ECD8;
-–cream2:     #EDE0C8;
-–white:      #FFFFFF;
-–rose:       #C4646A;
+  --gold:       #C9A84C;
+  --gold-light: #E8D08A;
+  --gold-pale:  #F5EAC8;
+  --gold-dim:   #9A7A3A;
+  --black:      #000000;
+  --dark:       #000000;
+  --dark2:      #000000;
+  --dark3:      #080808;
+  --mid:        #111111;
+  --cream:      #F5ECD8;
+  --cream2:     #EDE0C8;
+  --white:      #FFFFFF;
+  --rose:       #C4646A;
 }
 
 html { scroll-behavior: smooth; background: #000000; }
 
 body {
-font-family: ‘Jost’, sans-serif;
-background: #000000;
-color: #F5ECD8;
-overflow-x: hidden;
-min-height: 100vh;
+  font-family: 'Jost', sans-serif;
+  background: #000000;
+  color: #F5ECD8;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(–black); }
-::-webkit-scrollbar-thumb { background: var(–gold-dim); border-radius: 2px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
 
 /* noise */
 body::before {
-content: ‘’;
-position: fixed;
-inset: 0;
-background-image: url(“data:image/svg+xml,%3Csvg viewBox=‘0 0 256 256’ xmlns=‘http://www.w3.org/2000/svg’%3E%3Cfilter id=‘noise’%3E%3CfeTurbulence type=‘fractalNoise’ baseFrequency=‘0.9’ numOctaves=‘4’ stitchTiles=‘stitch’/%3E%3C/filter%3E%3Crect width=‘100%25’ height=‘100%25’ filter=‘url(%23noise)’ opacity=‘1’/%3E%3C/svg%3E”);
-opacity: 0.03;
-pointer-events: none;
-z-index: 9999;
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
 }
 
 /* ── HERO ───────────────────────────────────────────────── */
 .hero {
-min-height: 60vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-position: relative;
-overflow: hidden;
-padding: 80px 24px 60px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 24px 60px;
 }
 .hero-bg {
-position: absolute;
-inset: 0;
-background:
-radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76,0.09) 0%, transparent 65%),
-linear-gradient(180deg, #000000 0%, #050505 50%, #000000 100%);
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76,0.09) 0%, transparent 65%),
+    linear-gradient(180deg, #000000 0%, #050505 50%, #000000 100%);
 }
 .particles {
-position: absolute;
-inset: 0;
-overflow: hidden;
-pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 .particle {
-position: absolute;
-width: 1px; height: 1px;
-background: var(–gold);
-border-radius: 50%;
-animation: float linear infinite;
-opacity: 0;
+  position: absolute;
+  width: 1px; height: 1px;
+  background: var(--gold);
+  border-radius: 50%;
+  animation: float linear infinite;
+  opacity: 0;
 }
 @keyframes float {
-0%   { transform: translateY(100vh); opacity: 0; }
-10%  { opacity: 0.6; }
-90%  { opacity: 0.3; }
-100% { transform: translateY(-10vh) translateX(20px); opacity: 0; }
+  0%   { transform: translateY(100vh); opacity: 0; }
+  10%  { opacity: 0.6; }
+  90%  { opacity: 0.3; }
+  100% { transform: translateY(-10vh) translateX(20px); opacity: 0; }
 }
 
 .hero-content { position: relative; z-index: 2; }
 
 .hero-logo-wrap {
-width: 110px; height: 110px;
-margin: 0 auto 32px;
-border-radius: 50%;
-border: 1px solid rgba(201,168,76,0.35);
-padding: 5px;
-animation: rotateSlow 30s linear infinite;
+  width: 110px; height: 110px;
+  margin: 0 auto 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.35);
+  padding: 5px;
+  animation: rotateSlow 30s linear infinite;
 }
 @keyframes rotateSlow {
-from { transform: rotate(0deg); }
-to   { transform: rotate(360deg); }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 .hero-logo-inner {
-width: 100%; height: 100%;
-border-radius: 50%;
-border: 1px solid rgba(201,168,76,0.15);
-background: rgba(201,168,76,0.04);
-display: flex; align-items: center; justify-content: center;
-animation: rotateSlow 30s linear infinite reverse;
-overflow: hidden;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.15);
+  background: rgba(201,168,76,0.04);
+  display: flex; align-items: center; justify-content: center;
+  animation: rotateSlow 30s linear infinite reverse;
+  overflow: hidden;
 }
 .hero-logo-inner img {
-width: 90px; height: 90px;
-object-fit: contain;
-filter: drop-shadow(0 0 14px rgba(201,168,76,0.3));
+  width: 90px; height: 90px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 14px rgba(201,168,76,0.3));
 }
 
 .hero-eyebrow {
-font-size: 10px; font-weight: 300;
-letter-spacing: 7px; text-transform: uppercase;
-color: #C9A84C; margin-bottom: 16px;
-animation: fadeUp 1s 0.2s both;
+  font-size: 10px; font-weight: 300;
+  letter-spacing: 7px; text-transform: uppercase;
+  color: #C9A84C; margin-bottom: 16px;
+  animation: fadeUp 1s 0.2s both;
 }
 .hero-title {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: clamp(52px, 9vw, 100px);
-font-weight: 300; line-height: 0.95;
-color: #FFFFFF; letter-spacing: -1px;
-animation: fadeUp 1.2s 0.4s both; color: #FFFFFF;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(52px, 9vw, 100px);
+  font-weight: 300; line-height: 0.95;
+  color: #FFFFFF; letter-spacing: -1px;
+  animation: fadeUp 1.2s 0.4s both; color: #FFFFFF;
 }
 .hero-title em { font-style: italic; color: #E8D08A; }
 .hero-divider {
-width: 70px; height: 1px;
-background: linear-gradient(90deg, transparent, var(–gold), transparent);
-margin: 24px auto 20px;
-animation: fadeUp 1s 0.7s both;
+  width: 70px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 24px auto 20px;
+  animation: fadeUp 1s 0.7s both;
 }
 .hero-sub {
-font-size: 11px; font-weight: 300;
-letter-spacing: 5px; text-transform: uppercase;
-color: rgba(245,236,216,0.7);
-animation: fadeUp 1s 0.9s both;
+  font-size: 11px; font-weight: 300;
+  letter-spacing: 5px; text-transform: uppercase;
+  color: rgba(245,236,216,0.7);
+  animation: fadeUp 1s 0.9s both;
 }
 @keyframes fadeUp {
-from { opacity: 0; transform: translateY(20px); }
-to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ── NAV TABS ───────────────────────────────────────────── */
 .nav-tabs-wrap {
-position: sticky;
-top: 0; z-index: 100;
-background: rgba(0,0,0,1);
-backdrop-filter: blur(20px);
-border-bottom: 1px solid rgba(201,168,76,0.12);
+  position: sticky;
+  top: 0; z-index: 100;
+  background: rgba(0,0,0,1);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(201,168,76,0.12);
 }
 .nav-tabs {
-display: flex;
-overflow-x: auto;
-scrollbar-width: none;
-max-width: 1100px;
-margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .nav-tabs::-webkit-scrollbar { display: none; }
 .nav-tab {
-padding: 18px 24px;
-font-size: 10px; font-weight: 400;
-letter-spacing: 3px; text-transform: uppercase;
-color: rgba(242,232,213,0.38);
-cursor: pointer;
-border: none; border-bottom: 2px solid transparent;
-background: none; font-family: ‘Jost’, sans-serif;
-white-space: nowrap;
-transition: all 0.3s;
-margin-bottom: -1px;
+  padding: 18px 24px;
+  font-size: 10px; font-weight: 400;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(242,232,213,0.38);
+  cursor: pointer;
+  border: none; border-bottom: 2px solid transparent;
+  background: none; font-family: 'Jost', sans-serif;
+  white-space: nowrap;
+  transition: all 0.3s;
+  margin-bottom: -1px;
 }
 .nav-tab:hover { color: #F5ECD8; }
 .nav-tab.active { color: #C9A84C; border-bottom-color: #C9A84C; }
@@ -193,227 +192,227 @@ margin-bottom: -1px;
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 .panel-wrap {
-max-width: 1100px;
-background: #000000;
-margin: 0 auto;
-padding: 70px 40px 100px;
+  max-width: 1100px;
+  background: #000000;
+  margin: 0 auto;
+  padding: 70px 40px 100px;
 }
 
 /* ── SECTION HEADING ────────────────────────────────────── */
 .panel-header {
-margin-bottom: 48px;
+  margin-bottom: 48px;
 }
 .panel-label {
-font-size: 9px; font-weight: 400;
-letter-spacing: 6px; text-transform: uppercase;
-color: #C9A84C; margin-bottom: 12px;
+  font-size: 9px; font-weight: 400;
+  letter-spacing: 6px; text-transform: uppercase;
+  color: #C9A84C; margin-bottom: 12px;
 }
 .panel-title {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: clamp(38px, 5vw, 58px);
-font-weight: 300; line-height: 1;
-color: #FFFFFF;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 300; line-height: 1;
+  color: #FFFFFF;
 }
 .panel-title em { font-style: italic; color: #E8D08A; }
 .gold-rule {
-width: 44px; height: 1px;
-background: #C9A84C; margin-top: 20px;
+  width: 44px; height: 1px;
+  background: #C9A84C; margin-top: 20px;
 }
 
 /* ── SUBSECTION LABEL ───────────────────────────────────── */
 .sub-label {
-font-size: 9px; letter-spacing: 5px;
-text-transform: uppercase; color: #9A7A3A;
-padding: 28px 0 10px;
-border-bottom: 1px solid rgba(201,168,76,0.15);
-margin-bottom: 4px;
-grid-column: 1 / -1;
+  font-size: 9px; letter-spacing: 5px;
+  text-transform: uppercase; color: #9A7A3A;
+  padding: 28px 0 10px;
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  margin-bottom: 4px;
+  grid-column: 1 / -1;
 }
 
 /* ── ITEM GRID ──────────────────────────────────────────── */
 .item-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
 }
 @media (max-width: 700px) { .item-grid { grid-template-columns: 1fr; } }
 
 .menu-item {
-display: flex;
-justify-content: space-between;
-align-items: baseline;
-padding: 15px 0;
-border-bottom: 1px solid rgba(201,168,76,0.15);
-gap: 16px;
-position: relative;
-transition: all 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  gap: 16px;
+  position: relative;
+  transition: all 0.3s;
 }
 .menu-item::before {
-content: ‘’;
-position: absolute;
-left: -12px; right: -12px; top: 0; bottom: 0;
-background: rgba(201,168,76,0.04);
-border-radius: 4px;
-opacity: 0;
-transition: opacity 0.3s;
+  content: '';
+  position: absolute;
+  left: -12px; right: -12px; top: 0; bottom: 0;
+  background: rgba(201,168,76,0.04);
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 .menu-item:hover::before { opacity: 1; }
 .item-left { flex: 1; }
 .item-name {
-font-family: ‘Cormorant Garamond’, Georgia, serif;
-font-size: 17px; font-weight: 400;
-color: #F5ECD8; margin-bottom: 2px;
-transition: color 0.3s;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 17px; font-weight: 400;
+  color: #F5ECD8; margin-bottom: 2px;
+  transition: color 0.3s;
 }
 .menu-item:hover .item-name { color: #E8D08A; }
 .item-eng {
-font-size: 11px; font-style: italic;
-color: rgba(245,236,216,0.45);
-font-family: ‘Cormorant Garamond’, Georgia, serif;
+  font-size: 11px; font-style: italic;
+  color: rgba(245,236,216,0.45);
+  font-family: 'Cormorant Garamond', Georgia, serif;
 }
 .item-price {
-font-family: ‘Cormorant Garamond’, Georgia, serif;
-font-size: 17px; font-weight: 400;
-color: #C9A84C; white-space: nowrap; flex-shrink: 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 17px; font-weight: 400;
+  color: #C9A84C; white-space: nowrap; flex-shrink: 0;
 }
 .item-price small { font-size: 11px; color: #9A7A3A; }
 
 /* star highlight */
 .item-name.star { color: #E8D08A; }
 .item-name.star::after {
-content: ’ ★’;
-font-size: 12px; color: #C9A84C;
+  content: ' ★';
+  font-size: 12px; color: #C9A84C;
 }
 
 /* ── SPECIAL BANNER ─────────────────────────────────────── */
 .special-banner {
-background: linear-gradient(135deg, rgba(196,100,106,0.1), rgba(201,168,76,0.07));
-border: 1px solid rgba(196,100,106,0.22);
-border-radius: 8px;
-padding: 28px 32px;
-margin-bottom: 36px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 20px;
-grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(196,100,106,0.1), rgba(201,168,76,0.07));
+  border: 1px solid rgba(196,100,106,0.22);
+  border-radius: 8px;
+  padding: 28px 32px;
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  grid-column: 1 / -1;
 }
 .special-banner-text .tag {
-font-size: 9px; letter-spacing: 4px;
-text-transform: uppercase; color: #C4646A;
-margin-bottom: 8px;
+  font-size: 9px; letter-spacing: 4px;
+  text-transform: uppercase; color: #C4646A;
+  margin-bottom: 8px;
 }
 .special-banner-text h3 {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 26px; font-weight: 400; color: #FFFFFF;
-margin-bottom: 6px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 400; color: #FFFFFF;
+  margin-bottom: 6px;
 }
 .special-banner-text p {
-font-size: 12px; color: rgba(245,236,216,0.7);
-line-height: 1.6;
+  font-size: 12px; color: rgba(245,236,216,0.7);
+  line-height: 1.6;
 }
 .special-banner-price { text-align: right; flex-shrink: 0; }
 .special-banner-price .price {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 42px; font-weight: 300;
-color: #E8D08A; line-height: 1;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px; font-weight: 300;
+  color: #E8D08A; line-height: 1;
 }
 .special-banner-price .per {
-font-size: 11px; color: rgba(242,232,213,0.35); margin-top: 4px;
+  font-size: 11px; color: rgba(242,232,213,0.35); margin-top: 4px;
 }
 @media (max-width: 600px) {
-.special-banner { flex-direction: column; text-align: center; }
-.special-banner-price { text-align: center; }
+  .special-banner { flex-direction: column; text-align: center; }
+  .special-banner-price { text-align: center; }
 }
 
 /* ── COCKTAIL GRID (3 col) ──────────────────────────────── */
 .cocktail-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 2px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
 }
 @media (max-width: 800px) { .cocktail-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 500px) { .cocktail-grid { grid-template-columns: 1fr; } }
 
 .cocktail-item {
-padding: 18px 22px;
-border: 1px solid rgba(201,168,76,0.07);
-background: rgba(201,168,76,0.02);
-transition: all 0.35s;
-position: relative; overflow: hidden;
+  padding: 18px 22px;
+  border: 1px solid rgba(201,168,76,0.07);
+  background: rgba(201,168,76,0.02);
+  transition: all 0.35s;
+  position: relative; overflow: hidden;
 }
 .cocktail-item::before {
-content: ‘’;
-position: absolute; inset: 0;
-background: linear-gradient(135deg, rgba(201,168,76,0.06), transparent);
-opacity: 0; transition: opacity 0.35s;
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.06), transparent);
+  opacity: 0; transition: opacity 0.35s;
 }
 .cocktail-item:hover { border-color: rgba(201,168,76,0.22); }
 .cocktail-item:hover::before { opacity: 1; }
 .cocktail-name {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 19px; font-weight: 400;
-color: #F5ECD8; margin-bottom: 4px;
-transition: color 0.3s;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px; font-weight: 400;
+  color: #F5ECD8; margin-bottom: 4px;
+  transition: color 0.3s;
 }
 .cocktail-item:hover .cocktail-name { color: #E8D08A; }
 .cocktail-price {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 15px; color: #C9A84C;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px; color: #C9A84C;
 }
 
 /* ── RON / VINO GRID (4 col) ────────────────────────────── */
 .ron-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 2px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
 }
 @media (max-width: 800px) { .ron-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 500px) { .ron-grid { grid-template-columns: 1fr; } }
 
 .ron-item {
-padding: 15px 18px;
-border: 1px solid rgba(201,168,76,0.06);
-transition: border-color 0.3s;
+  padding: 15px 18px;
+  border: 1px solid rgba(201,168,76,0.06);
+  transition: border-color 0.3s;
 }
 .ron-item:hover { border-color: rgba(201,168,76,0.2); }
 .ron-name {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 16px; color: #EDE0C8; margin-bottom: 3px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; color: #EDE0C8; margin-bottom: 3px;
 }
 .ron-price {
-font-size: 13px; color: #9A7A3A;
-font-family: ‘Cormorant Garamond’, serif;
+  font-size: 13px; color: #9A7A3A;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 /* ── BEBIDAS SIMPLES ────────────────────────────────────── */
 .bebidas-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 2px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
 }
 @media (max-width: 700px) { .bebidas-grid { grid-template-columns: 1fr 1fr; } }
 
 .bebida-item {
-padding: 14px 18px;
-border: 1px solid rgba(201,168,76,0.06);
-transition: border-color 0.3s;
+  padding: 14px 18px;
+  border: 1px solid rgba(201,168,76,0.06);
+  transition: border-color 0.3s;
 }
 .bebida-item:hover { border-color: rgba(201,168,76,0.2); }
 .bebida-name {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 16px; color: #F5ECD8; margin-bottom: 3px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; color: #F5ECD8; margin-bottom: 3px;
 }
 .bebida-price {
-font-size: 13px; color: #C9A84C;
-font-family: ‘Cormorant Garamond’, serif;
+  font-size: 13px; color: #C9A84C;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 /* ── CAFE GRID ──────────────────────────────────────────── */
 .cafe-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 2px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
 }
 @media (max-width: 700px) { .cafe-grid { grid-template-columns: 1fr 1fr; } }
 
@@ -422,8 +421,8 @@ gap: 2px;
 
 /* ── REVEAL ─────────────────────────────────────────────── */
 .reveal {
-opacity: 0; transform: translateY(24px);
-transition: opacity 0.7s ease, transform 0.7s ease;
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-d1 { transition-delay: 0.08s; }
@@ -434,32 +433,30 @@ transition: opacity 0.7s ease, transform 0.7s ease;
 
 /* ── FOOTER ─────────────────────────────────────────────── */
 footer {
-background: var(–black);
-border-top: 1px solid rgba(201,168,76,0.1);
-padding: 36px 40px;
-text-align: center;
+  background: var(--black);
+  border-top: 1px solid rgba(201,168,76,0.1);
+  padding: 36px 40px;
+  text-align: center;
 }
 .footer-brand {
-font-family: ‘Cinzel’, serif;
-font-size: 12px; letter-spacing: 5px;
-color: #9A7A3A; margin-bottom: 8px;
+  font-family: 'Cinzel', serif;
+  font-size: 12px; letter-spacing: 5px;
+  color: #9A7A3A; margin-bottom: 8px;
 }
 .footer-copy {
-font-size: 11px; color: rgba(242,232,213,0.2);
+  font-size: 11px; color: rgba(242,232,213,0.2);
 }
 
 /* ── RESPONSIVE NAV ─────────────────────────────────────── */
 @media (max-width: 600px) {
-.panel-wrap { padding: 50px 20px 80px; }
+  .panel-wrap { padding: 50px 20px 80px; }
 }
-background: #000000;
+  background: #000000;
 </style>
-
 </head>
 <body>
 
 <!-- HERO -->
-
 <div class="hero">
   <div class="hero-bg"></div>
   <div class="particles" id="particles"></div>
@@ -478,7 +475,6 @@ background: #000000;
 </div>
 
 <!-- STICKY TABS -->
-
 <div class="nav-tabs-wrap">
   <div class="nav-tabs">
     <button class="nav-tab active"     onclick="showPanel('desayunos',this)">Desayunos</button>
@@ -500,13 +496,10 @@ background: #000000;
 </div>
 
 <!-- ══════════════════════════════════════════════════════ -->
-
 <!--  PANELS                                               -->
-
 <!-- ══════════════════════════════════════════════════════ -->
 
 <!-- DESAYUNOS -->
-
 <div class="panel active" id="panel-desayunos">
   <div class="panel-wrap">
     <div class="panel-header reveal">
@@ -515,22 +508,22 @@ background: #000000;
       <div class="gold-rule"></div>
     </div>
     <div class="item-grid reveal reveal-d1">
-      <div class="menu-item"><div class="item-left"><div class="item-name">Huevos Hervidos (2u)</div><div class="item-eng">Boiled eggs</div></div><div class="item-price">500<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Homelet</div><div class="item-eng">Omelette</div></div><div class="item-price">550<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Huevos Fritos (2u)</div><div class="item-eng">Fried eggs</div></div><div class="item-price">550<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Huevo Frito (2u)</div><div class="item-eng">Fried eggs</div></div><div class="item-price">550<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Huevo Hervido (2u)</div><div class="item-eng">Boiled eggs</div></div><div class="item-price">500<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Omelet</div><div class="item-eng">Omelette</div></div><div class="item-price">550<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Tostadas con Mantequilla</div><div class="item-eng">Toast with butter</div></div><div class="item-price">300<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Tostadas con Mermelada de Frutas</div><div class="item-eng">Toast with fruit jam</div></div><div class="item-price">500<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Tostadas</div><div class="item-eng">Toast</div></div><div class="item-price">200<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Té Caliente</div><div class="item-eng">Hot tea</div></div><div class="item-price">100<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Té Frío</div><div class="item-eng">Iced tea</div></div><div class="item-price">120<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Leche Caliente</div><div class="item-eng">Hot milk</div></div><div class="item-price">200<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Chocolate Caliente</div><div class="item-eng">Hot chocolate</div></div><div class="item-price">350<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Té Caliente</div><div class="item-eng">Hot tea</div></div><div class="item-price">150<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Té Frío</div><div class="item-eng">Iced tea</div></div><div class="item-price">180<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Ensalada Fría</div><div class="item-eng">Cold salad</div></div><div class="item-price">600<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Sandwich de Queso Gouda</div><div class="item-eng">Gouda cheese sandwich</div></div><div class="item-price">650<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Sandwich de Jamón y Queso Gouda</div><div class="item-eng">Ham and gouda sandwich</div></div><div class="item-price">750<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Sandwich de Huevo</div><div class="item-eng">Egg sandwich</div></div><div class="item-price">600<small> MN</small></div></div>
     </div>
   </div>
 </div>
 
 <!-- ENTRANTES -->
-
 <div class="panel" id="panel-entrantes">
   <div class="panel-wrap">
     <div class="panel-header reveal">
@@ -542,39 +535,39 @@ background: #000000;
       <div class="sub-label">Tostones</div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Tostones Naturales</div><div class="item-eng">Plain tostones</div></div><div class="item-price">300<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Tostones con Jamón</div><div class="item-eng">Stuffed with ham</div></div><div class="item-price">500<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Tostones con Queso</div><div class="item-eng">Stuffed with cheese</div></div><div class="item-price">500<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Tostones con Queso Blanco</div><div class="item-eng">Stuffed with white cheese</div></div><div class="item-price">500<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Tostones con Queso Gouda</div><div class="item-eng">Stuffed with gouda</div></div><div class="item-price">700<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Tostones con Vegetales</div><div class="item-eng">Stuffed with vegetables</div></div><div class="item-price">350<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Tostones Jamón y Queso</div><div class="item-eng">Ham and cheese</div></div><div class="item-price">750<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Tostones Queso Gouda</div><div class="item-eng">Stuffed with gouda</div></div><div class="item-price">700<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Tostones con Atún</div><div class="item-eng">Stuffed with tuna</div></div><div class="item-price">1,000<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Tostones Ropa Vieja</div><div class="item-eng">Stuffed with shredded beef</div></div><div class="item-price">1,000<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Tostones Jamón y Queso Blanco</div><div class="item-eng">Ham and white cheese</div></div><div class="item-price">750<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Tostones Jamón y Queso Gouda</div><div class="item-eng">Ham and gouda cheese</div></div><div class="item-price">850<small> MN</small></div></div>
-      <div class="sub-label">Aperitivos & Sopas</div>
+      <div class="sub-label">Sopas & Cremas</div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Crema Aurora</div><div class="item-eng">Aurora cream soup</div></div><div class="item-price">600<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Crema de Queso Blanco</div><div class="item-eng">White cheese cream soup</div></div><div class="item-price">750<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Crema de Queso Gouda</div><div class="item-eng">Gouda cheese cream soup</div></div><div class="item-price">850<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Crema de Queso Blanco y Jamón</div><div class="item-eng">White cheese and ham soup</div></div><div class="item-price">1,000<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Crema de Queso Gouda y Jamón</div><div class="item-eng">Gouda cheese and ham soup</div></div><div class="item-price">1,100<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Sopa de Pollo</div><div class="item-eng">Chicken soup</div></div><div class="item-price">600<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Sopa de Mariscos</div><div class="item-eng">Seafood soup</div></div><div class="item-price">1,200<small> MN</small></div></div>
+      <div class="sub-label">Aperitivos & Para Compartir</div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Chicharritas</div><div class="item-eng">Plantain chips</div></div><div class="item-price">200<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Maripositas Chinas</div><div class="item-eng">Chinese butterflies</div></div><div class="item-price">400<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Croquetas</div><div class="item-eng">Croquettes</div></div><div class="item-price">600<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Brusquetas</div><div class="item-eng">Bruschettas</div></div><div class="item-price">600<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Papas Fritas</div><div class="item-eng">French fries</div></div><div class="item-price">700<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Papas Sudadas</div><div class="item-eng">Steamed potatoes</div></div><div class="item-price">250<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Crema Aurora</div><div class="item-eng">Aurora cream soup</div></div><div class="item-price">400<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Crema de Queso</div><div class="item-eng">Cream of cheese soup</div></div><div class="item-price">700<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Crema de Queso Gouda</div><div class="item-eng">Cream of gouda cheese soup</div></div><div class="item-price">650<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Crema de Jamón y Queso</div><div class="item-eng">Ham and cheese soup</div></div><div class="item-price">1,100<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Crema de Jamón y Queso Gouda</div><div class="item-eng">Ham and gouda cheese soup</div></div><div class="item-price">800<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Sopa de Pollo</div><div class="item-eng">Chicken soup</div></div><div class="item-price">600<small> MN</small></div></div>
-      <div class="sub-label">Para Compartir</div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Dados de Jamón</div><div class="item-eng">Cubes of ham</div></div><div class="item-price">400<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Dados de Queso Gouda</div><div class="item-eng">Cubes of gouda cheese</div></div><div class="item-price">700<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Maripositas Chinas</div><div class="item-eng">Chinese butterflies</div></div><div class="item-price">500<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Ensalada de Estación</div><div class="item-eng">Seasonal salad</div></div><div class="item-price">350<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Dados de Jamón</div><div class="item-eng">Ham cubes</div></div><div class="item-price">400<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Dados de Queso Gouda</div><div class="item-eng">Gouda cheese cubes</div></div><div class="item-price">700<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Dados de Jamón y Queso Blanco</div><div class="item-eng">Ham and white cheese cubes</div></div><div class="item-price">600<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Dados de Jamón y Queso Gouda</div><div class="item-eng">Ham and gouda cheese cubes</div></div><div class="item-price">900<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Coctel de Pescado</div><div class="item-eng">Fish cocktail</div></div><div class="item-price">800<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Coctel de Camarón</div><div class="item-eng">Shrimp cocktail</div></div><div class="item-price">1,400<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name class="star"">Picadera Argüelles</div><div class="item-eng">Argüelles platter</div></div><div class="item-price">2,050<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Picadera Villaverde</div><div class="item-eng">Croquetas, Brusquetas, Chicharritas, Dados JyQ</div></div><div class="item-price" style="font-size:13px;color:#9A7A3A;">Consultar</div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Picadera Argüelles</div><div class="item-eng">Croquetas, Brusquetas, Tostones rellenos JyQ</div></div><div class="item-price" style="font-size:13px;color:#9A7A3A;">Consultar</div></div>
     </div>
   </div>
 </div>
 
 <!-- GUARNICIONES -->
-
 <div class="panel" id="panel-guarniciones">
   <div class="panel-wrap">
     <div class="panel-header reveal">
@@ -593,7 +586,6 @@ background: #000000;
 </div>
 
 <!-- AGREGADOS -->
-
 <div class="panel" id="panel-agregados">
   <div class="panel-wrap">
     <div class="panel-header reveal">
@@ -602,45 +594,42 @@ background: #000000;
       <div class="gold-rule"></div>
     </div>
     <div class="item-grid reveal reveal-d1">
-      <div class="menu-item"><div class="item-left"><div class="item-name">Chorizo</div><div class="item-eng">Sausage</div></div><div class="item-price">400<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Cerdo</div><div class="item-eng">Pork</div></div><div class="item-price">800<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Pollo</div><div class="item-eng">Chicken</div></div><div class="item-price">400<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Jamón</div><div class="item-eng">Ham</div></div><div class="item-price">300<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Queso Blanco</div><div class="item-eng">White cheese</div></div><div class="item-price">300<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Queso Gouda</div><div class="item-eng">Gouda cheese</div></div><div class="item-price">500<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Pimiento</div><div class="item-eng">Pepper</div></div><div class="item-price">300<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Col</div><div class="item-eng">Cabbage</div></div><div class="item-price">200<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Vegetales</div><div class="item-eng">Vegetables</div></div><div class="item-price">300<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Jamón</div><div class="item-eng">Ham</div></div><div class="item-price">300<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Queso Blanco</div><div class="item-eng">White cheese</div></div><div class="item-price">500<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Queso Gouda</div><div class="item-eng">Gouda cheese</div></div><div class="item-price">400<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Cebolla</div><div class="item-eng">Onion</div></div><div class="item-price">200<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Piña</div><div class="item-eng">Pineapple</div></div><div class="item-price">250<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Aceituna</div><div class="item-eng">Olive</div></div><div class="item-price">300<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Atún</div><div class="item-eng">Tuna</div></div><div class="item-price">550<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Vegetales</div><div class="item-eng">Vegetables</div></div><div class="item-price">300<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Tomate</div><div class="item-eng">Tomato</div></div><div class="item-price">250<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Piña</div><div class="item-eng">Pineapple</div></div><div class="item-price">250<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Atún</div><div class="item-eng">Tuna</div></div><div class="item-price">550<small> MN</small></div></div>
     </div>
   </div>
 </div>
 
 <!-- TACOS & KEBAB -->
-
 <div class="panel" id="panel-tacos">
   <div class="panel-wrap">
     <div class="panel-header reveal">
       <div class="panel-label">Tradición con sabor propio</div>
-      <div class="panel-title">Tacos <em>& Kebab</em></div>
+      <div class="panel-title"><em>Tacos & Kebab</em></div>
       <div class="gold-rule"></div>
     </div>
     <div class="item-grid reveal reveal-d1">
       <div class="sub-label">Tacos</div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Tacos de Vegetales</div><div class="item-eng">Vegetable tacos</div></div><div class="item-price">800<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Tacos de Pollo</div><div class="item-eng">Chicken tacos</div></div><div class="item-price">1,200<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Tacos Jamón y Queso Blanco</div><div class="item-eng">Ham and white cheese</div></div><div class="item-price">1,100<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Tacos Jamón y Queso Gouda</div><div class="item-eng">Ham and gouda cheese</div></div><div class="item-price">1,300<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Tacos de Jamón y Queso Blanco</div><div class="item-eng">Ham and white cheese tacos</div></div><div class="item-price">1,100<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Tacos de Jamón y Queso Gouda</div><div class="item-eng">Ham and gouda tacos</div></div><div class="item-price">1,300<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Tacos de Cerdo</div><div class="item-eng">Pork tacos</div></div><div class="item-price">1,500<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Tacos de Ropa Vieja</div><div class="item-eng">Shredded beef tacos</div></div><div class="item-price">1,800<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Tacos Mixtos Cerdo y Pollo</div><div class="item-eng">Mixed pork and chicken tacos</div></div><div class="item-price">1,550<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Tacos Mixtos Cerdo y Camarón</div><div class="item-eng">Mixed pork and shrimp tacos</div></div><div class="item-price">1,950<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Tacos de Camarón</div><div class="item-eng">Shrimp tacos</div></div><div class="item-price">2,000<small> MN</small></div></div>
       <div class="sub-label">Kebab</div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Kebab de Pollo</div><div class="item-eng">Chicken kebab</div></div><div class="item-price">1,200<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Kebab de Ropa Vieja</div><div class="item-eng">Shredded beef kebab</div></div><div class="item-price">1,550<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Kebab de Cerdo</div><div class="item-eng">Pork kebab</div></div><div class="item-price">1,500<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Kebab de Atún</div><div class="item-eng">Tuna kebab</div></div><div class="item-price">1,800<small> MN</small></div></div>
     </div>
@@ -648,21 +637,19 @@ background: #000000;
 </div>
 
 <!-- PESCADOS -->
-
 <div class="panel" id="panel-pescados">
   <div class="panel-wrap">
     <div class="panel-header reveal">
       <div class="panel-label">Del mar a la piedra</div>
-      <div class="panel-title">Pescados <em>& Mariscos</em></div>
+      <div class="panel-title"><em>Pescados & Mariscos</em></div>
       <div class="gold-rule"></div>
     </div>
     <div class="item-grid reveal reveal-d1">
       <div class="sub-label">Pescados</div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Eperlan de Pescado</div><div class="item-eng">Smelt fish</div></div><div class="item-price">2,450<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Eperlan</div><div class="item-eng">Smelt fish</div></div><div class="item-price">2,450<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Filete de Pescado</div><div class="item-eng">Fish filet</div></div><div class="item-price">2,200<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Filete Empanado</div><div class="item-eng">Breaded fish filet</div></div><div class="item-price">3,000<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Filete al Ajillo</div><div class="item-eng">Fish filet with garlic</div></div><div class="item-price">2,650<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Ruedas de Pescado</div><div class="item-eng">Fish steaks</div></div><div class="item-price">3,100<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Filete de Pescado Empanado</div><div class="item-eng">Breaded fish filet</div></div><div class="item-price">3,000<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Filete de Pescado al Ajillo</div><div class="item-eng">Fish filet with garlic</div></div><div class="item-price">2,650<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Pescado Asado</div><div class="item-eng">Roasted fish</div></div><div class="item-price">2,500<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Pescado a la Piedra</div><div class="item-eng">Stone grilled fish</div></div><div class="item-price">2,500<small> MN</small></div></div>
       <div class="sub-label">Mariscos</div>
@@ -679,7 +666,6 @@ background: #000000;
 </div>
 
 <!-- CARNES -->
-
 <div class="panel" id="panel-carnes">
   <div class="panel-wrap">
     <div class="panel-header reveal">
@@ -698,25 +684,22 @@ background: #000000;
       <div class="menu-item"><div class="item-left"><div class="item-name">Pollo al Ajillo</div><div class="item-eng">Chicken in garlic sauce</div></div><div class="item-price">2,300<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Pollo a la Piedra</div><div class="item-eng">Stone grilled chicken</div></div><div class="item-price">2,200<small> MN</small></div></div>
       <div class="sub-label">Cerdo</div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Cerdo a la Piedra</div><div class="item-eng">Stone grilled pork</div></div><div class="item-price">3,000<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Fajitas de Cerdo con Vegetales</div><div class="item-eng">Pork strips with vegetables</div></div><div class="item-price">3,000<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Fajitas de Cerdo Empanadas</div><div class="item-eng">Breaded pork strips</div></div><div class="item-price">2,300<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Fajitas de Cerdo con Vegetales</div><div class="item-eng">Pork strips with vegetables</div></div><div class="item-price">2,700<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Fricase de Cerdo</div><div class="item-eng">Pork fricasse</div></div><div class="item-price">2,350<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Fricase de Cerdo a la Piedra</div><div class="item-eng">Stone grilled pork fricasse</div></div><div class="item-price">2,500<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Cerdo Grillé</div><div class="item-eng">Grilled pork</div></div><div class="item-price">2,450<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Cerdo al Ajillo</div><div class="item-eng">Pork in garlic sauce</div></div><div class="item-price">2,650<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Costilla en Salsa</div><div class="item-eng">Ribs in sauce</div></div><div class="item-price">3,000<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Bistec de Cerdo Empanado</div><div class="item-eng">Breaded pork steak</div></div><div class="item-price">2,250<small> MN</small></div></div>
       <div class="sub-label">Res ★</div>
       <div class="menu-item"><div class="item-left"><div class="item-name star">Bistec Uruguayo</div><div class="item-eng">Palomilla steak</div></div><div class="item-price">4,500<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Ropa Vieja</div><div class="item-eng">Shredded beef</div></div><div class="item-price">2,400<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Bistec de Res</div><div class="item-eng">Beef steak</div></div><div class="item-price">2,300<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Estofado de Ternera</div><div class="item-eng">Veal stew</div></div><div class="item-price">2,800<small> MN</small></div></div>
     </div>
   </div>
 </div>
 
 <!-- PASTAS -->
-
 <div class="panel" id="panel-pastas">
   <div class="panel-wrap">
     <div class="panel-header reveal">
@@ -728,24 +711,21 @@ background: #000000;
       <div class="sub-label">Spaguetti</div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Spaguetti Napolitano Queso Blanco</div><div class="item-eng">With regular cheese</div></div><div class="item-price">700<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Spaguetti Napolitano Queso Gouda</div><div class="item-eng">With gouda cheese</div></div><div class="item-price">1,100<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Spaguetti con Ropa Vieja</div><div class="item-eng">With shredded beef</div></div><div class="item-price">2,300<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Spaguetti Bolognesa</div><div class="item-eng">Spaghetti bolognese</div></div><div class="item-price">1,950<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Spaguetti Carbonara</div><div class="item-eng">Spaghetti carbonara</div></div><div class="item-price">2,200<small> MN</small></div></div>
       <div class="sub-label">Macarrones</div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Macarrones Napolitano Queso Blanco</div><div class="item-eng">With regular cheese</div></div><div class="item-price">750<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Macarrones Napolitano Queso Gouda</div><div class="item-eng">With gouda cheese</div></div><div class="item-price">1,200<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Macarrones con Ropa Vieja</div><div class="item-eng">With shredded beef</div></div><div class="item-price">1,800<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Macarrones Bolognesa</div><div class="item-eng">Macaroni bolognese</div></div><div class="item-price">1,950<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Macarrones Carbonara</div><div class="item-eng">Macaroni carbonara</div></div><div class="item-price">2,200<small> MN</small></div></div>
       <div class="sub-label">Especialidades</div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Lasaña</div><div class="item-eng">Lasagna</div></div><div class="item-price">1,700<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Pastas al Horno</div><div class="item-eng">Baked pasta</div></div><div class="item-price">1,400<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Pastas al Horno</div><div class="item-eng">Baked pasta</div></div><div class="item-price">1,900<small> MN</small></div></div>
     </div>
   </div>
 </div>
 
 <!-- PIZZAS -->
-
 <div class="panel" id="panel-pizzas">
   <div class="panel-wrap">
     <div class="panel-header reveal">
@@ -763,41 +743,25 @@ background: #000000;
 </div>
 
 <!-- SANDWICHES -->
-
 <div class="panel" id="panel-sandwiches">
   <div class="panel-wrap">
     <div class="panel-header reveal">
-      <div class="panel-label">Pan artesanal</div>
-      <div class="panel-title"><em>Sandwiches</em></div>
+      <div class="panel-label">Pan artesanal & parrilla</div>
+      <div class="panel-title"><em>Sandwiches & Hamburguesas</em></div>
       <div class="gold-rule"></div>
     </div>
     <div class="item-grid reveal reveal-d1">
-      <div class="menu-item"><div class="item-left"><div class="item-name">Sandwich de Jamón</div><div class="item-eng">Ham sandwich</div></div><div class="item-price">600<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Sandwich de Queso Blanco</div><div class="item-eng">White cheese sandwich</div></div><div class="item-price">600<small> MN</small></div></div>
+      <div class="sub-label">Sandwiches</div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Sandwich de Queso Gouda</div><div class="item-eng">Gouda cheese sandwich</div></div><div class="item-price">600<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Sandwich Jamón y Queso Blanco</div><div class="item-eng">Ham and white cheese</div></div><div class="item-price">600<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Sandwich Jamón y Queso Gouda</div><div class="item-eng">Ham and gouda cheese</div></div><div class="item-price">1,200<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Sandwich de Atún</div><div class="item-eng">Tuna sandwich</div></div><div class="item-price">850<small> MN</small></div></div>
-    </div>
-  </div>
-</div>
-
-<!-- HAMBURGUESAS -->
-
-<div class="panel" id="panel-hamburguesas">
-  <div class="panel-wrap">
-    <div class="panel-header reveal">
-      <div class="panel-label">A la parrilla</div>
-      <div class="panel-title"><em>Hamburguesas</em></div>
-      <div class="gold-rule"></div>
-    </div>
-    <div class="item-grid reveal reveal-d1">
+      <div class="menu-item"><div class="item-left"><div class="item-name">Sandwich Jamón y Queso Blanco</div><div class="item-eng">Ham and white cheese sandwich</div></div><div class="item-price">600<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Sandwich de Jamón y Queso Gouda</div><div class="item-eng">Ham and gouda cheese sandwich</div></div><div class="item-price">1,200<small> MN</small></div></div>
+      <div class="sub-label">Hamburguesas</div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Hamburguesa Clásica</div><div class="item-eng">Classic burger</div></div><div class="item-price">500<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Hamburguesa con Jamón</div><div class="item-eng">Burger with ham</div></div><div class="item-price">700<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Hamburguesa con Queso Blanco</div><div class="item-eng">Cheese burger</div></div><div class="item-price">700<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Hamburguesa con Queso Gouda</div><div class="item-eng">Gouda cheese burger</div></div><div class="item-price">950<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Hamburguesa Jamón y Queso Blanco</div><div class="item-eng">Ham and cheese burger</div></div><div class="item-price">800<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Hamburguesa Jamón y Queso Gouda</div><div class="item-eng">Ham and gouda burger</div></div><div class="item-price">1,000<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Hamburguesa con Jamón y Queso Blanco</div><div class="item-eng">Ham and cheese burger</div></div><div class="item-price">800<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Hamburguesa con Jamón y Queso Gouda</div><div class="item-eng">Ham and gouda burger</div></div><div class="item-price">1,000<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Hamburguesa Super</div><div class="item-eng">Super burger</div></div><div class="item-price">1,300<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Hamburguesa a Caballo</div><div class="item-eng">Burger topped with fried egg</div></div><div class="item-price">1,800<small> MN</small></div></div>
     </div>
@@ -805,7 +769,6 @@ background: #000000;
 </div>
 
 <!-- POSTRES -->
-
 <div class="panel" id="panel-postres">
   <div class="panel-wrap">
     <div class="panel-header reveal">
@@ -814,19 +777,18 @@ background: #000000;
       <div class="gold-rule"></div>
     </div>
     <div class="item-grid reveal reveal-d1">
-      <div class="menu-item"><div class="item-left"><div class="item-name">Copa de Helado</div><div class="item-eng">Ice cream sundae</div></div><div class="item-price">300<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Dos Gracias</div><div class="item-eng">Two scoops</div></div><div class="item-price">300<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Tres Gracias</div><div class="item-eng">Three scoops</div></div><div class="item-price">400<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Ensalada de Helado</div><div class="item-eng">Ice cream salad</div></div><div class="item-price">550<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name star">Copa Lolita</div><div class="item-eng">Lolita sundae</div></div><div class="item-price">600<small> MN</small></div></div>
       <div class="menu-item"><div class="item-left"><div class="item-name">Flan</div><div class="item-eng">Caramel custard</div></div><div class="item-price">450<small> MN</small></div></div>
-      <div class="menu-item"><div class="item-left"><div class="item-name">Cake a la Moda</div><div class="item-eng">Cake with ice cream</div></div><div class="item-price">660<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Copa de Helado</div><div class="item-eng">Ice cream sundae</div></div><div class="item-price">300<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Ensalada de Helado</div><div class="item-eng">Ice cream salad</div></div><div class="item-price">550<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Helado Dos Gracias</div><div class="item-eng">Two scoops</div></div><div class="item-price">300<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Helado Tres Gracias</div><div class="item-eng">Three scoops</div></div><div class="item-price">400<small> MN</small></div></div>
+      <div class="menu-item"><div class="item-left"><div class="item-name">Dulces Finos (Ración Media)</div><div class="item-eng">Fine sweets half portion</div></div><div class="item-price">300<small> MN</small></div></div>
     </div>
   </div>
 </div>
 
 <!-- BEBIDAS -->
-
 <div class="panel" id="panel-bebidas">
   <div class="panel-wrap">
     <div class="panel-header reveal">
@@ -835,34 +797,36 @@ background: #000000;
       <div class="gold-rule"></div>
     </div>
     <div class="reveal reveal-d1">
-      <div style="display:block; font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px;">Bebidas</div>
+      <div style="display:block;font-size:9px;letter-spacing:5px;text-transform:uppercase;color:#9A7A3A;padding:0 0 10px;border-bottom:1px solid rgba(201,168,76,0.15);margin-bottom:4px;">Jugos, Batidos & Refrescos</div>
       <div class="bebidas-grid" style="margin-bottom:40px;">
-        <div class="bebida-item"><div class="bebida-name">Agua Natural (500ml)</div><div class="bebida-price">370 MN</div></div>
-        <div class="bebida-item"><div class="bebida-name">Cerveza Importada</div><div class="bebida-price">500 MN</div></div>
-        <div class="bebida-item"><div class="bebida-name">Cerveza Nacional</div><div class="bebida-price">650 MN</div></div>
-        <div class="bebida-item"><div class="bebida-name">Refresco Enlatado</div><div class="bebida-price">480 MN</div></div>
         <div class="bebida-item"><div class="bebida-name">Jugo del Día</div><div class="bebida-price">350 MN</div></div>
-        <div class="bebida-item"><div class="bebida-name">Suero de Helado del Día</div><div class="bebida-price">550 MN</div></div>
-        <div class="bebida-item"><div class="bebida-name">Limonada Frappe</div><div class="bebida-price">250 MN</div></div>
+        <div class="bebida-item"><div class="bebida-name">Malteada</div><div class="bebida-price">700 MN</div></div>
         <div class="bebida-item"><div class="bebida-name">Limonada Villaverde</div><div class="bebida-price">300 MN</div></div>
+        <div class="bebida-item"><div class="bebida-name">Suero de Helado</div><div class="bebida-price">550 MN</div></div>
+        <div class="bebida-item"><div class="bebida-name">Piña Colada sin Alcohol</div><div class="bebida-price">500 MN</div></div>
+        <div class="bebida-item"><div class="bebida-name">Cerveza Importada</div><div class="bebida-price">500 MN</div></div>
+        <div class="bebida-item"><div class="bebida-name">Cerveza Nacional Cristal</div><div class="bebida-price">650 MN</div></div>
+        <div class="bebida-item"><div class="bebida-name">Agua Natural Aquell</div><div class="bebida-price">370 MN</div></div>
+        <div class="bebida-item"><div class="bebida-name">Agua Tratada 750ml Los Medardos</div><div class="bebida-price">500 MN</div></div>
+        <div class="bebida-item"><div class="bebida-name">Refresco Piña</div><div class="bebida-price">480 MN</div></div>
+        <div class="bebida-item"><div class="bebida-name">Refresco Kola</div><div class="bebida-price">480 MN</div></div>
+        <div class="bebida-item"><div class="bebida-name">Refresco Naranja</div><div class="bebida-price">480 MN</div></div>
+        <div class="bebida-item"><div class="bebida-name">Refresco Limón</div><div class="bebida-price">480 MN</div></div>
       </div>
-      <div style="display:block; font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px;">Cafés</div>
+      <div style="display:block;font-size:9px;letter-spacing:5px;text-transform:uppercase;color:#9A7A3A;padding:0 0 10px;border-bottom:1px solid rgba(201,168,76,0.15);margin-bottom:4px;">Cafés</div>
       <div class="cafe-grid">
-        <div class="bebida-item"><div class="bebida-name">Café Expreso</div><div class="bebida-price">140 MN</div></div>
+        <div class="bebida-item"><div class="bebida-name">Café Espresso</div><div class="bebida-price">140 MN</div></div>
         <div class="bebida-item"><div class="bebida-name">Café Americano</div><div class="bebida-price">150 MN</div></div>
         <div class="bebida-item"><div class="bebida-name">Café Mulato</div><div class="bebida-price">240 MN</div></div>
         <div class="bebida-item"><div class="bebida-name">Café Cortado</div><div class="bebida-price">190 MN</div></div>
         <div class="bebida-item"><div class="bebida-name">Café Capuchino</div><div class="bebida-price">250 MN</div></div>
         <div class="bebida-item"><div class="bebida-name">Café Híbrido</div><div class="bebida-price">300 MN</div></div>
-        <div class="bebida-item"><div class="bebida-name">Té Caliente</div><div class="bebida-price">100 MN</div></div>
-        <div class="bebida-item"><div class="bebida-name">Té Frío</div><div class="bebida-price">120 MN</div></div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- COCTELERÍA -->
-
 <div class="panel" id="panel-cocteleria">
   <div class="panel-wrap">
     <div class="panel-header reveal">
@@ -871,46 +835,41 @@ background: #000000;
       <div class="gold-rule"></div>
     </div>
     <div class="reveal reveal-d1">
-      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Cócteles</div>
+      <div style="font-size:9px;letter-spacing:5px;text-transform:uppercase;color:#9A7A3A;padding:0 0 10px;border-bottom:1px solid rgba(201,168,76,0.15);margin-bottom:4px;display:block;">Cócteles</div>
       <div class="cocktail-grid" style="margin-bottom:48px;">
+        <div class="cocktail-item"><div class="cocktail-name">Mojito</div><div class="cocktail-price">520 MN</div></div>
         <div class="cocktail-item"><div class="cocktail-name">Daiquiri</div><div class="cocktail-price">500 MN</div></div>
         <div class="cocktail-item"><div class="cocktail-name">Cuba Libre</div><div class="cocktail-price">500 MN</div></div>
         <div class="cocktail-item"><div class="cocktail-name">Ron Collins</div><div class="cocktail-price">400 MN</div></div>
-        <div class="cocktail-item"><div class="cocktail-name">Mojito</div><div class="cocktail-price">520 MN</div></div>
-        <div class="cocktail-item"><div class="cocktail-name">Piña Colada s/Alcohol</div><div class="cocktail-price">500 MN</div></div>
-        <div class="cocktail-item"><div class="cocktail-name">Piña Colada</div><div class="cocktail-price">700 MN</div></div>
+        <div class="cocktail-item"><div class="cocktail-name">Margarita Coppa</div><div class="cocktail-price">500 MN</div></div>
+        <div class="cocktail-item"><div class="cocktail-name">Sangría Tropical</div><div class="cocktail-price">550 MN</div></div>
+        <div class="cocktail-item"><div class="cocktail-name">Piña Colada con Alcohol</div><div class="cocktail-price">850 MN</div></div>
         <div class="cocktail-item"><div class="cocktail-name">Cubata</div><div class="cocktail-price">600 MN</div></div>
+        <div class="cocktail-item"><div class="cocktail-name">Caipirísima</div><div class="cocktail-price">450 MN</div></div>
         <div class="cocktail-item"><div class="cocktail-name">Caipiroska</div><div class="cocktail-price">400 MN</div></div>
-        <div class="cocktail-item"><div class="cocktail-name">Caipirisima</div><div class="cocktail-price">450 MN</div></div>
-        <div class="cocktail-item"><div class="cocktail-name">Bloody Mary</div><div class="cocktail-price">500 MN</div></div>
+        <div class="cocktail-item"><div class="cocktail-name">Crema Licor</div><div class="cocktail-price">500 MN</div></div>
         <div class="cocktail-item"><div class="cocktail-name">Chelada Preparada</div><div class="cocktail-price">250 MN</div></div>
         <div class="cocktail-item"><div class="cocktail-name">Michelada c/Tajín</div><div class="cocktail-price">400 MN</div></div>
         <div class="cocktail-item"><div class="cocktail-name">Michelada c/Sal</div><div class="cocktail-price">250 MN</div></div>
-        <div class="cocktail-item"><div class="cocktail-name">Sangría Tropical</div><div class="cocktail-price">550 MN</div></div>
-        <div class="cocktail-item"><div class="cocktail-name">Expresso Martini</div><div class="cocktail-price">500 MN</div></div>
-        <div class="cocktail-item"><div class="cocktail-name">Margarita</div><div class="cocktail-price">500 MN</div></div>
-        <div class="cocktail-item"><div class="cocktail-name">Vodka</div><div class="cocktail-price">300 MN</div></div>
-        <div class="cocktail-item"><div class="cocktail-name">Shot de Tequila</div><div class="cocktail-price">350 MN</div></div>
-        <div class="cocktail-item"><div class="cocktail-name">Wisky Reserve 7 Años</div><div class="cocktail-price">300 MN</div></div>
-        <div class="cocktail-item"><div class="cocktail-name">Crema de Licor Arisbell</div><div class="cocktail-price">500 MN</div></div>
       </div>
-      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Rones</div>
+      <div style="font-size:9px;letter-spacing:5px;text-transform:uppercase;color:#9A7A3A;padding:0 0 10px;border-bottom:1px solid rgba(201,168,76,0.15);margin-bottom:4px;display:block;">Bebidas por Tragos</div>
       <div class="ron-grid">
-        <div class="ron-item"><div class="ron-name">Havana Club 3 Años</div><div class="ron-price">350 MN</div></div>
-        <div class="ron-item"><div class="ron-name">Havana Club Especial</div><div class="ron-price">450 MN</div></div>
-        <div class="ron-item"><div class="ron-name">Añejo Blanco</div><div class="ron-price">300 MN</div></div>
-        <div class="ron-item"><div class="ron-name">Habana Club Reserva</div><div class="ron-price">550 MN</div></div>
-        <div class="ron-item"><div class="ron-name">Santiago 8 Años</div><div class="ron-price">800 MN</div></div>
-        <div class="ron-item"><div class="ron-name">Havana Club Smoky</div><div class="ron-price">500 MN</div></div>
-        <div class="ron-item"><div class="ron-name">Havana Club 7 Años</div><div class="ron-price">700 MN</div></div>
+        <div class="ron-item"><div class="ron-name">Ron Havana Club 3 Años</div><div class="ron-price">350 MN</div></div>
+        <div class="ron-item"><div class="ron-name">Ron Havana Club Especial</div><div class="ron-price">450 MN</div></div>
+        <div class="ron-item"><div class="ron-name">Ron Añejo Blanco</div><div class="ron-price">300 MN</div></div>
+        <div class="ron-item"><div class="ron-name">Ron Havana Club Reserva</div><div class="ron-price">550 MN</div></div>
         <div class="ron-item"><div class="ron-name">Pacto de Navio</div><div class="ron-price">1,000 MN</div></div>
+        <div class="ron-item"><div class="ron-name">Copa de Licor (60ml)</div><div class="ron-price">500 MN</div></div>
+        <div class="ron-item"><div class="ron-name">Espresso Martini</div><div class="ron-price">500 MN</div></div>
+        <div class="ron-item"><div class="ron-name">Shot de Tequila</div><div class="ron-price">350 MN</div></div>
+        <div class="ron-item"><div class="ron-name">Vodka</div><div class="ron-price">300 MN</div></div>
+        <div class="ron-item"><div class="ron-name">Whisky Reserve 7 Años</div><div class="ron-price">300 MN</div></div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- VINOS -->
-
 <div class="panel" id="panel-vinos">
   <div class="panel-wrap">
     <div class="panel-header reveal">
@@ -919,37 +878,29 @@ background: #000000;
       <div class="gold-rule"></div>
     </div>
     <div class="reveal reveal-d1">
-      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Vino Tinto</div>
+      <div style="font-size:9px;letter-spacing:5px;text-transform:uppercase;color:#9A7A3A;padding:0 0 10px;border-bottom:1px solid rgba(201,168,76,0.15);margin-bottom:4px;display:block;">Vino Tinto</div>
       <div class="ron-grid" style="margin-bottom:36px;">
         <div class="ron-item"><div class="ron-name">Entre Rios</div><div class="ron-price">400 MN</div></div>
-        <div class="ron-item"><div class="ron-name">La Baronne</div><div class="ron-price">650 MN</div></div>
-        <div class="ron-item"><div class="ron-name">Otoñal</div><div class="ron-price">750 MN</div></div>
         <div class="ron-item"><div class="ron-name">Constelación</div><div class="ron-price">600 MN</div></div>
-        <div class="ron-item"><div class="ron-name">Gato Negro</div><div class="ron-price">1,000 MN</div></div>
+        <div class="ron-item"><div class="ron-name">Alaris Malbec 2024</div><div class="ron-price">800 MN</div></div>
+        <div class="ron-item"><div class="ron-name">Alaris</div><div class="ron-price">800 MN</div></div>
+        <div class="ron-item"><div class="ron-name">Trapiche</div><div class="ron-price">800 MN</div></div>
       </div>
-      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Vino Blanco</div>
+      <div style="font-size:9px;letter-spacing:5px;text-transform:uppercase;color:#9A7A3A;padding:0 0 10px;border-bottom:1px solid rgba(201,168,76,0.15);margin-bottom:4px;display:block;">Vino Blanco</div>
       <div class="ron-grid" style="margin-bottom:36px;">
-        <div class="ron-item"><div class="ron-name">Entre Rios</div><div class="ron-price">550 MN</div></div>
-        <div class="ron-item"><div class="ron-name">La Baronne</div><div class="ron-price">750 MN</div></div>
-        <div class="ron-item"><div class="ron-name">La Fauna de la Viña</div><div class="ron-price">800 MN</div></div>
+        <div class="ron-item"><div class="ron-name">Entre Río</div><div class="ron-price">550 MN</div></div>
+        <div class="ron-item"><div class="ron-name">La Viña</div><div class="ron-price">800 MN</div></div>
       </div>
-      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Cabernet Sauvignon</div>
-      <div class="ron-grid" style="margin-bottom:36px;">
-        <div class="ron-item"><div class="ron-name">Frontera</div><div class="ron-price">850 MN</div></div>
-        <div class="ron-item"><div class="ron-name">Loco de Piedra</div><div class="ron-price">950 MN</div></div>
-      </div>
-      <div style="font-size:9px; letter-spacing:5px; text-transform:uppercase; color:#9A7A3A; padding:0 0 10px; border-bottom:1px solid rgba(201,168,76,0.15); margin-bottom:4px; display:block;">Tempranillo & Carmenere</div>
+      <div style="font-size:9px;letter-spacing:5px;text-transform:uppercase;color:#9A7A3A;padding:0 0 10px;border-bottom:1px solid rgba(201,168,76,0.15);margin-bottom:4px;display:block;">Espumoso</div>
       <div class="ron-grid">
-        <div class="ron-item"><div class="ron-name">Finca del Mar</div><div class="ron-price">900 MN</div></div>
-        <div class="ron-item"><div class="ron-name">Luciente</div><div class="ron-price">800 MN</div></div>
-        <div class="ron-item"><div class="ron-name">Carmenere</div><div class="ron-price">900 MN</div></div>
+        <div class="ron-item"><div class="ron-name">Vino Espumoso (Botella)</div><div class="ron-price">3,000 MN</div></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-brand">Gastrobar Villaverde</div>
   <div class="footer-copy" style="margin-top:6px;">© 2026 · Todos los derechos reservados</div>
@@ -995,6 +946,5 @@ window.addEventListener('DOMContentLoaded', () => setTimeout(triggerReveals, 100
 window.addEventListener('load', triggerReveals);
 triggerReveals();
 </script>
-
 </body>
 </html>
